@@ -68,5 +68,5 @@ class RelaksAccuracy(Resource):
         return {"model": "Relaks", "accuracy": f"{RELASK_ACCURACY * 100:.1f}%"}
 
 if __name__ == '__main__':
-    port = int(os.environ.get(8080, 5000))  # Toma el puerto de Railway o usa 5000
+    port = int(os.environ.get("PORT", 5000))  # Toma el puerto de Railway o usa 5000
     app.run(host="0.0.0.0", port=port)
