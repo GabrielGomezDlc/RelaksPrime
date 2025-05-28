@@ -1,3 +1,4 @@
+import os
 import ydf
 import numpy as np
 from flask import Flask, request, jsonify
@@ -68,4 +69,4 @@ class RelaksAccuracy(Resource):
 
 if __name__ == '__main__':
     port = int(os.environ.get(8080, 5000))  # Toma el puerto de Railway o usa 5000
-    app.run(host="0.0.0.0", port=8080)
+    app.run(host="0.0.0.0", port=port)
